@@ -33,4 +33,6 @@ https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view?usp=shari
 
 
 ## License
-Pandu Septiandito, Since 2022
+Jakarta 
+Pandu Septiandito
+Since 2025
