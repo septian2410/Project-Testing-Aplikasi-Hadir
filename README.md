@@ -6,7 +6,7 @@ Menguji secara Manual dan Otomatisasi  pada sebuah website yang dipergunakan kar
 ------------------------
 ###### ![FITUR APLIKASI HADIR YANG DI UJI](https://github.com/user-attachments/assets/f11b8b86-2011-4e3d-b17e-e3df5c3bb463)
 
-## Tools
+## TechnicalStack 
 ------------------------
 ###### ![TOOLS](https://github.com/user-attachments/assets/6e44e9ba-27c9-40cf-b792-664b3fd9ac6c)
 
