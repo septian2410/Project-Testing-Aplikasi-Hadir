@@ -10,10 +10,17 @@ Menguji secara Manual dan Otomatisasi  pada sebuah website yang dipergunakan kar
 ------------------------
 ###### ![TOOLS](https://github.com/user-attachments/assets/6e44e9ba-27c9-40cf-b792-664b3fd9ac6c)
 
-#
 ## Showcase Application
 ------------------------
 ![APLIKASI HADIR](https://github.com/user-attachments/assets/df221ff0-a51a-4f31-9ed1-9d232b218a7f)
+
+## TEST RESULT & EXTENT REPORT
+------------------------
+![TEST RESULT   EXTENT REPORT](https://github.com/user-attachments/assets/faca74b8-eb06-4398-a779-f6e4c091b91b)
+
+## TEST RESULT & KATALON STUDIO
+------------------------
+![TEST RESULT KATALON STUDIO](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49)
 
 
 ## Dokumentasi Lainnya
@@ -25,6 +32,7 @@ Menguji secara Manual dan Otomatisasi  pada sebuah website yang dipergunakan kar
 ## Video Demo Automation
 ------------------------
 https://drive.google.com/file/d/1hTkdPQTRleRh4qHnEbENFOj61QCP_Ar6/view?usp=sharing
+
 
 ## Video Presentasi 
 ------------------------
