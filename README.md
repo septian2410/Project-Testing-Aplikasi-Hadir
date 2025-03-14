@@ -41,6 +41,4 @@ https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view?usp=shari
 
 
 ## License
-Jakarta 
-Pandu Septiandito
-Since 2025
+Pandu Septiandito, Jakarta, Since 2025
