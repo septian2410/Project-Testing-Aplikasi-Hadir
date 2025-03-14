@@ -1,6 +1,6 @@
 # Project Testing Aplikasi Hadir  
 ------------------------
-Menguji secara Manual dan Otomatisasi  pada sebuah website yang dipergunakan karyawan untuk melakukan kegiatan absensi sehari hari, dari 2 model bentuk yaitu Web Admin dan Web User PT.Dika, Serta membuat CIT (Control Impact Test) Sesuai dengan FSD yang berlaku.
+Menguji secara Manual dan Otomatisasi  menggunakan Selenium dan Katalon Studio pada sebuah website yang dipergunakan karyawan untuk melakukan kegiatan absensi sehari hari, dari 2 model bentuk yaitu Web Admin dan Web User PT.Dika, Serta membuat Dokumen CIT (Control Impact Test) yang terdiri dari Summary Test, Timeline & Scenario Test, Sesuai dengan Dokumen FSD yang berlaku.
 
 ## Features yang di uji
 ------------------------
