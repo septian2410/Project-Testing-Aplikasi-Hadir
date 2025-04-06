@@ -1,0 +1,3319 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Apr 6, 2025 07:19:25 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Positive</a></li>
+					<li><a href='#'>@TC_Shifting_Tambah_Gagal_KolomKosong</a></li>
+					<li><a href='#'>@TC_Shifting_Delete_Sukses</a></li>
+					<li><a href='#'>@TC_Shifting_Tambah_Gagal_KodeTerpakai</a></li>
+					<li><a href='#'>@TC_Shifting_Tambahkan_Dibatalkan</a></li>
+					<li><a href='#'>@TC_Shifting_Reset_Pencarian_Data_Berhasil</a></li>
+					<li><a href='#'>@Negative</a></li>
+					<li><a href='#'>@TC_Jadwal_Search_Data_Ditemukan</a></li>
+					<li><a href='#'>@TC_Jadwal_Tambahkan_Sukses</a></li>
+					<li><a href='#'>@TC_Shifting_Edit_Sukses</a></li>
+					<li><a href='#'>@TC_User_Login_Gagal_AkunTidakTerdaftar</a></li>
+					<li><a href='#'>@TC_Shifting_Delete_Dibatalkan</a></li>
+					<li><a href='#'>@TC_Admin_Login_Gagal_KombinasiSalah</a></li>
+					<li><a href='#'>@TC_Admin_Logout_Sukses</a></li>
+					<li><a href='#'>@TC_Admin_Login_Sukses</a></li>
+					<li><a href='#'>@TC_Shifting_Search_Data_Ditemukan</a></li>
+					<li><a href='#'>@TC_User_Login_Gagal_KombinasiSalah</a></li>
+					<li><a href='#'>@TC_Shifting_Tambahkan_Sukses</a></li>
+					<li><a href='#'>@TC_Jadwal_Reset_Pencarian_Data_Berhasil</a></li>
+					<li><a href='#'>@TC_Jadwal_Edit_Dibatalkan</a></li>
+					<li><a href='#'>@TC_User_Logout_Sukses</a></li>
+					<li><a href='#'>@TC_Jadwal_Edit_Gagal_Tanpa_Perubahan</a></li>
+					<li><a href='#'>@TC_Jadwal_Tambah_Gagal_KolomKosong</a></li>
+					<li><a href='#'>@TC_Jadwal_Edit_Sukses</a></li>
+					<li><a href='#'>@TC_Jadwal_Tambahkan_Dibatalkan</a></li>
+					<li><a href='#'>@TC_Jadwal_Search_Data_Tidak_Ditemukan</a></li>
+					<li><a href='#'>@TC_Shifting_Edit_Dibatalkan</a></li>
+					<li><a href='#'>@TC_Admin_Login_Gagal_AkunTidakTerdaftar</a></li>
+					<li><a href='#'>@TC_Jadwal_Delete_Dibatalkan</a></li>
+					<li><a href='#'>@TC_Jadwal_Delete_Sukses</a></li>
+					<li><a href='#'>@TC_Shifting_Search_Data_Tidak_Ditemukan</a></li>
+					<li><a href='#'>@TC_User_Login_Sukses</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
+                    <span class='strong'>14</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>30</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
+                    <span class='strong'>148</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Admin Authentication (Login)</span>
+						<span class='test-time'>Apr 6, 2025 07:19:27 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='2' status='pass'>
+
+	<span class='duration right label'>00 00 14.870</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Akun yang Tidak Terdaftar</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Admin_Login_Gagal_AkunTidakTerdaftar</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='17' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='18' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterUsername(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "khevin@hadir.com" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='19' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "123" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='20' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='21' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.verifyLoginMessage2(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil dashboard LOGIN dengan validasi "Akun tidak ditemukan" pada Web Admin</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='22' status='pass'>
+
+	<span class='duration right label'>00 00 09.203</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.)</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Admin_Login_Gagal_KombinasiSalah</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='37' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='38' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterUsername(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "admin@hadir.com" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='39' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "123" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='40' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='41' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.verifyLoginMessage2(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil dashboard LOGIN dengan validasi "Email atau password salah" pada Web Admin</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='42' status='pass'>
+
+	<span class='duration right label'>00 00 09.133</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Kredensial valid</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Admin_Login_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='57' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='58' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterUsername(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "admin@hadir.com" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='59' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "admin@hadir" pada Web Admin</div>
+
+
+		</li>
+		<li test-id='60' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web Admin</div>
+
+
+		</li>
+		<li test-id='61' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LoginDefinitions.verifyLoginMessage1(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil dashboard HADIR dengan copyright "© 2022 Aplikasi Hadir" pada Web Admin</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='62'>
+					<div class='test-heading'>
+						<span class='test-name'>Search Shifting</span>
+						<span class='test-time'>Apr 6, 2025 07:20:00 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='63' status='pass'>
+
+	<span class='duration right label'>00 00 19.269</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Sistem menampilkan tabel kosong jika pencarian shifting tidak ditemukan.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Search_Data_Tidak_Ditemukan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='78' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman shifting pada Web Admin</div>
+
+
+		</li>
+		<li test-id='79' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.inputDataPencarian(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan data pencarian "BRI" pada kolom input pencarian nama</div>
+
+
+		</li>
+		<li test-id='80' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.klikSearch())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol search</div>
+
+
+		</li>
+		<li test-id='81' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.verifySearchNotFoundMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "0-0 of 0" terlihat pada table shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='82' status='pass'>
+
+	<span class='duration right label'>00 00 08.420</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Sistem menampilkan hasil pencarian jika data shifting tersedia.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Search_Data_Ditemukan</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='97' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.inputDataPencarian(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan data pencarian "BCA Life" pada kolom input pencarian nama</div>
+
+
+		</li>
+		<li test-id='98' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.klikSearch())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol search</div>
+
+
+		</li>
+		<li test-id='99' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.verifySearchSuccessMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "BCA Life" berhasil tampil pada table shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='100'>
+					<div class='test-heading'>
+						<span class='test-name'>Reset Shifting</span>
+						<span class='test-time'>Apr 6, 2025 07:20:28 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='101' status='pass'>
+
+	<span class='duration right label'>00 00 06.223</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Reset_Pencarian_Data_Berhasil</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='116' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingResetDefinitions.klikReset())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol reset</div>
+
+
+		</li>
+		<li test-id='117' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingResetDefinitions.verifyResetShiftingSuccessMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil kolom input pencarian sudah kosong kembali pada halaman shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='118'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit Shifting</span>
+						<span class='test-time'>Apr 6, 2025 07:20:34 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='119' status='pass'>
+
+	<span class='duration right label'>00 00 18.575</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna Membatalkan pengubahan Data Shifting.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Edit_Dibatalkan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='134' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given kedua kalinya saya membuka halaman shifting pada Web Admin</div>
+
+
+		</li>
+		<li test-id='135' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.klikOptionData1())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol option edit pada data pertama halaman shifting di Web Admin</div>
+
+
+		</li>
+		<li test-id='136' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Batal pada form edit shifting</div>
+
+
+		</li>
+		<li test-id='137' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.missingFormDelete())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form edit shifting telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='138' status='pass'>
+
+	<span class='duration right label'>00 00 20.964</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Berhasil Mengubah Data Shifting.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Edit_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='153' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.klik())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol option edit kembali pada data pertama</div>
+
+
+		</li>
+		<li test-id='154' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.inputJamKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah nama jam kerja data pertama menjadi "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='155' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.selectUnitKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah unit kerja data pertama menjadi "3D"</div>
+
+
+		</li>
+		<li test-id='156' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.klikSimpan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Simpan pada form edit shifting</div>
+
+
+		</li>
+		<li test-id='157' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data shifting yang telah diubah yaitu "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='158' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingEditDefinitions.verifyEditSuksesMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "5 Hari Kerja - Shift Pagi (BukaLapak) Update" telah ter-Update pada table shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='159'>
+					<div class='test-heading'>
+						<span class='test-name'>Delete Shifting</span>
+						<span class='test-time'>Apr 6, 2025 07:21:14 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='160' status='pass'>
+
+	<span class='duration right label'>00 00 15.970</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Delete_Dibatalkan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='175' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given ketiga kalinya saya membuka halaman shifting pada Web Admin</div>
+
+
+		</li>
+		<li test-id='176' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.klikOptionData2())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol option delete pada data Kedua halaman shifting</div>
+
+
+		</li>
+		<li test-id='177' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol Tidak pada form delete shifting</div>
+
+
+		</li>
+		<li test-id='178' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.missingFormDelete())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form hapus shifting telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='179' status='pass'>
+
+	<span class='duration right label'>00 00 12.984</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Delete_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='194' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.klikEditData2())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol option delete kembali pada data kedua</div>
+
+
+		</li>
+		<li test-id='195' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.klikSimpan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol Ya pada form delete shifting</div>
+
+
+		</li>
+		<li test-id='196' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data shifting yang telah dihapus yaitu "5 Hari Kerja - Shift Pagi (Indolakto)"</div>
+
+
+		</li>
+		<li test-id='197' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingDeleteDefinitions.verifyDeleteSuksesMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "0-0 of 0" telah ter-Hapus pada table shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='198'>
+					<div class='test-heading'>
+						<span class='test-name'>Tambahkan Shifting</span>
+						<span class='test-time'>Apr 6, 2025 07:21:43 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='199' status='pass'>
+
+	<span class='duration right label'>00 00 13.942</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna Membatalkan Penambahan Data Shifting.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Tambahkan_Dibatalkan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='214' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given keempat kalinya saya membuka halaman shifting pada Web Admin</div>
+
+
+		</li>
+		<li test-id='215' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambahkan pada halaman shifting</div>
+
+
+		</li>
+		<li test-id='216' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Batal pada form tambah shifting</div>
+
+
+		</li>
+		<li test-id='217' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.missingFormTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form tambah shifting telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='218' status='pass'>
+
+	<span class='duration right label'>00 00 10.711</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: pengguna mencoba menambahkan shifting tanpa mengisi satu pun kolom input.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Tambah_Gagal_KolomKosong</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='233' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambahkan pada halaman shifting</div>
+
+
+		</li>
+		<li test-id='234' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambah pada form tambah shifting</div>
+
+
+		</li>
+		<li test-id='235' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.validasi1(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat validasi "Nama shifting harus diisi!"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='236' status='pass'>
+
+	<span class='duration right label'>00 00 25.050</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna mencoba menambahkan shifting dengan kode yang sudah digunakan.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Tambah_Gagal_KodeTerpakai</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='251' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambahkan pada halaman shifting</div>
+
+
+		</li>
+		<li test-id='252' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.inputJamKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan nama jam kerja "5 Hari Kerja - Shift Pagi (BCA)"</div>
+
+
+		</li>
+		<li test-id='253' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.inputCodeShifting(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan kode shifting "0032"</div>
+
+
+		</li>
+		<li test-id='254' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectJamMasuk(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih jam masuk "8" dan menit "30"</div>
+
+
+		</li>
+		<li test-id='255' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectJamKeluar(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih jam keluar "17" dan menit "30"</div>
+
+
+		</li>
+		<li test-id='256' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambah pada form tambah shifting</div>
+
+
+		</li>
+		<li test-id='257' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.validasi1(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat validasi "Kode shifting sudah digunakan"</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='258' status='pass'>
+
+	<span class='duration right label'>00 00 52.040</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Berhasil Menambahkan Data Shifting.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Shifting_Tambahkan_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='273' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambahkan pada halaman shifting</div>
+
+
+		</li>
+		<li test-id='274' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.inputJamKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan nama jam kerja "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='275' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectUnitKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih unit kerja "APP Luar Kota"</div>
+
+
+		</li>
+		<li test-id='276' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.inputCodeShifting(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan kode shifting "0050"</div>
+
+
+		</li>
+		<li test-id='277' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectJamMasuk(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih jam masuk "8" dan menit "30"</div>
+
+
+		</li>
+		<li test-id='278' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectJamKeluar(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih jam keluar "17" dan menit "30"</div>
+
+
+		</li>
+		<li test-id='279' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectBreakStart(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Break Start atau awal jam istirahat "12" dan menit "00"</div>
+
+
+		</li>
+		<li test-id='280' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.selectBreakEnd(java.lang.String,java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Break End atau akhir jam istirahat "13" dan menit "00"</div>
+
+
+		</li>
+		<li test-id='281' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.klikTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Tambah pada form tambah shifting</div>
+
+
+		</li>
+		<li test-id='282' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data shifting yang telah ditambahkan yaitu "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='283' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingTambahDefinitions.verifyTambahMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian baru "5 Hari Kerja - Shift Pagi (True Money BSNI)" pada table shifting</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='284'>
+					<div class='test-heading'>
+						<span class='test-name'>Search Jadwal</span>
+						<span class='test-time'>Apr 6, 2025 07:23:25 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='285' status='pass'>
+
+	<span class='duration right label'>00 00 19.105</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Sistem menampilkan tabel kosong jika pencarian jadwal tidak ditemukan.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Negative</span>
+				<span class='category label'>@TC_Jadwal_Search_Data_Tidak_Ditemukan</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='300' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalSearchNegatifAndPositifDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman jadwal pada Web Admin</div>
+
+
+		</li>
+		<li test-id='301' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalSearchNegatifAndPositifDefinitions.inputDataPencarian(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan data pencarian "BRI" pada kolom input pencarian</div>
+
+
+		</li>
+		<li test-id='302' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalSearchNegatifAndPositifDefinitions.klikSearch())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol search pada halaman jadwal</div>
+
+
+		</li>
+		<li test-id='303' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalSearchNegatifAndPositifDefinitions.verifySearchNotFoundMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "0-0 of 0" terlihat pada table jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='304' status='pass'>
+
+	<span class='duration right label'>00 00 08.444</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Sistem menampilkan hasil pencarian jika data jadwal tersedia.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Search_Data_Ditemukan</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='319' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.inputDataPencarian(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan data pencarian "BCA Life" pada kolom input pencarian nama</div>
+
+
+		</li>
+		<li test-id='320' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.shifting.ShiftingSearchNegatifAndPositifDefinitions.klikSearch())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol search</div>
+
+
+		</li>
+		<li test-id='321' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalSearchNegatifAndPositifDefinitions.verifySearchSuccessMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "BCA Life" berhasil tampil pada table jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='322'>
+					<div class='test-heading'>
+						<span class='test-name'>Reset Jadwal</span>
+						<span class='test-time'>Apr 6, 2025 07:23:52 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='323' status='pass'>
+
+	<span class='duration right label'>00 00 06.197</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Reset_Pencarian_Data_Berhasil</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='338' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalResetDefinitions.klikReset())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya meng-klik tombol reset</div>
+
+
+		</li>
+		<li test-id='339' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalResetDefinitions.verifyResetShiftingSuccessMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil kolom input pencarian sudah kosong kembali pada halaman Jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='340'>
+					<div class='test-heading'>
+						<span class='test-name'>Edit Jadwal Featured</span>
+						<span class='test-time'>Apr 6, 2025 07:23:59 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='341' status='pass'>
+
+	<span class='duration right label'>00 00 20.403</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna Membatalkan pengubahan Data Jadwal.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Edit_Dibatalkan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='356' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given kedua kalinya saya membuka halaman jadwal pada Web Admin</div>
+
+
+		</li>
+		<li test-id='357' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikOptionData1())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol option edit pada data pertama halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='358' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol Batal pada form edit data jadwal</div>
+
+
+		</li>
+		<li test-id='359' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.missingFormEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form edit data jadwal telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='360' status='pass'>
+
+	<span class='duration right label'>00 00 10.585</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Gagal mengedit data jadwal tanpa perubahan.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Edit_Gagal_Tanpa_Perubahan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='375' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikEditData1())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya kembali menekan tombol option edit pada data pertama</div>
+
+
+		</li>
+		<li test-id='376' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikSimpan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol simpan pada form edit data jadwal</div>
+
+
+		</li>
+		<li test-id='377' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.validasi1(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil validasi "Harap mengedit data hari terdahulu" pada form edit data jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='378' status='pass'>
+
+	<span class='duration right label'>00 00 48.167</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna Berhasil Mengubah Data Jadwal.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Edit_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='393' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikEditData1())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya kembali menekan tombol option edit pada data pertama</div>
+
+
+		</li>
+		<li test-id='394' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.pilihTipeJadwalBaru(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Tipe jadwal Baru yaitu "Jadwal kerja flexible"</div>
+
+
+		</li>
+		<li test-id='395' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectTanggalEfectiveBaru2(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Tanggal Efective Baru yaitu tanggal "10" April</div>
+
+
+		</li>
+		<li test-id='396' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.inputJadwalKerjaBaru(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan nama Jadwal kerja baru yaitu "1 (Bukalapak) Update"</div>
+
+
+		</li>
+		<li test-id='397' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikHariKerjaBaru())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol hari kerja pada halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='398' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectHariSenin(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah hari kerja baru pada senin "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='399' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectHariSelasa(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah hari kerja baru pada selasa "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='400' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectHariRabu(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah hari kerja baru pada rabu "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='401' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectHariKamis(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah hari kerja baru pada kamis "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='402' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.selectHariJumat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya mengubah hari kerja baru pada jumat "5 Hari Kerja - Shift Pagi (BukaLapak) Update"</div>
+
+
+		</li>
+		<li test-id='403' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikTerapkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol terapkan pada form pilih hari kerja</div>
+
+
+		</li>
+		<li test-id='404' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.klikSimpan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol simpan pada form edit data jadwal</div>
+
+
+		</li>
+		<li test-id='405' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data jadwal yang telah diubah yaitu "1 (Bukalapak) Update"</div>
+
+
+		</li>
+		<li test-id='406' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalEditDefinitions.verifyEditJadwalSuksesMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "1 (Bukalapak) Update" telah ter-Update pada table jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='407'>
+					<div class='test-heading'>
+						<span class='test-name'>Delete Jadwal</span>
+						<span class='test-time'>Apr 6, 2025 07:25:18 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='408' status='pass'>
+
+	<span class='duration right label'>00 00 18.293</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Delete_Dibatalkan</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='423' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given keempat kalinya saya membuka halaman jadwal pada Web Admin</div>
+
+
+		</li>
+		<li test-id='424' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.klikOptionData1())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya meng-klik tombol option delete pada data Kedua halaman jadwal</div>
+
+
+		</li>
+		<li test-id='425' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya meng-klik tombol Tidak pada form hapus jadwal</div>
+
+
+		</li>
+		<li test-id='426' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.missingFormEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form hapus jadwal telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='427' status='pass'>
+
+	<span class='duration right label'>00 00 12.887</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Delete_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='442' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.klikOptionData2())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya kembali meng-klik tombol option delete pada data kedua</div>
+
+
+		</li>
+		<li test-id='443' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.klikSimpan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya meng-klik tombol Ya pada form hapus jadwal</div>
+
+
+		</li>
+		<li test-id='444' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data jadwal yang telah dihapus yaitu "1 (Indolakto)"</div>
+
+
+		</li>
+		<li test-id='445' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalDeleteDefinitions.verifyDeleteSuksesMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "0-0 of 0" telah ter-Hapus pada table jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='446'>
+					<div class='test-heading'>
+						<span class='test-name'>Tambahkan Jadwal</span>
+						<span class='test-time'>Apr 6, 2025 07:25:49 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='447' status='pass'>
+
+	<span class='duration right label'>00 00 14.075</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Tidak ada perubahan saat pengguna membatalkan penambahan jadwal.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Negative</span>
+				<span class='category label'>@TC_Jadwal_Tambahkan_Dibatalkan</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='462' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given kelima kalinya saya membuka halaman jadwal pada Web Admin</div>
+
+
+		</li>
+		<li test-id='463' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol Tambahkan pada halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='464' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikBatal())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menge-klik tombol Batal pada form tambah data jadwal</div>
+
+
+		</li>
+		<li test-id='465' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.missingFormEdit())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then saya melihat form tambah data jadwal telah menghilang</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='466' status='pass'>
+
+	<span class='duration right label'>00 00 08.542</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Gagal Tambah Jadwal - Semua kolom kosong</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_Jadwal_Tambah_Gagal_KolomKosong</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='481' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol Tambahkan pada halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='482' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol Tambah pada form tambah data jadwal</div>
+
+
+		</li>
+		<li test-id='483' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.verifyValidationMessage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then terlihat validasi Please fill out this field pada kolom tipe jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='484' status='pass'>
+
+	<span class='duration right label'>00 00 52.308</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengguna berhasil menambahkan data jadwal dengan input valid.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Positive</span>
+				<span class='category label'>@TC_Jadwal_Tambahkan_Sukses</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='499' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTambahkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol Tambahkan pada halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='500' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectTipeJadwal(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Tipe jadwal yaitu "Jadwal kerja flexible"</div>
+
+
+		</li>
+		<li test-id='501' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectTanggalEfectiveBaru2(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih Tanggal Efective Baru yaitu tanggal "12" April 2025</div>
+
+
+		</li>
+		<li test-id='502' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.inputJadwalKerja(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan nama Jadwal kerja yaitu "1 (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='503' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikHariKerja())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol hari kerja pada halaman jadwal di Web Admin</div>
+
+
+		</li>
+		<li test-id='504' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectHariSenin(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih hari kerja pada senin "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='505' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectHariSelasa(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih hari kerja pada selasa "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='506' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectHariRabu(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih hari kerja pada rabu "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='507' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectHariKamis(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih hari kerja pada kamis "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='508' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.selectHariJumat(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memilih hari kerja pada jumat "5 Hari Kerja - Shift Pagi (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='509' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTerapkan())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol terapkan pada form Jumlah Hari Kerja</div>
+
+
+		</li>
+		<li test-id='510' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.inputToleransi(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan waktu toleransi keterlambatan yaitu "30" menit</div>
+
+
+		</li>
+		<li test-id='511' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.klikTambah())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menge-klik tombol Tambah pada form tambah data jadwal</div>
+
+
+		</li>
+		<li test-id='512' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.cariData(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya mencari data jadwal yang telah ditambah yaitu "1 (True Money BSNI)"</div>
+
+
+		</li>
+		<li test-id='513' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.jadwal.JadwalTambahDefinitions.verifyTambahMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil data pencarian "1 (True Money BSNI)" telah terlihat pada table jadwal</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='514'>
+					<div class='test-heading'>
+						<span class='test-name'>Admin Authentication (Logout)</span>
+						<span class='test-time'>Apr 6, 2025 07:27:04 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='515' status='pass'>
+
+	<span class='duration right label'>00 00 11.187</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Berhasil LogOut</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Positive</span>
+				<span class='category label'>@TC_Admin_Logout_Sukses</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='530' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LogOutDefinitions.clickProfilButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol profil</div>
+
+
+		</li>
+		<li test-id='531' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LogOutDefinitions.clickLogOutButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol logout</div>
+
+
+		</li>
+		<li test-id='532' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebAdmin.steps.authentication.LogOutDefinitions.backToLogin(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Tampil kembali dashboard LOGIN dengan logo teks "Login"</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='533'>
+					<div class='test-heading'>
+						<span class='test-name'>User Authentication (Login)</span>
+						<span class='test-time'>Apr 6, 2025 07:27:15 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='534' status='pass'>
+
+	<span class='duration right label'>00 00 10.797</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Akun yang Tidak Terdaftar.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@Negative</span>
+				<span class='category label'>@TC_User_Login_Gagal_AkunTidakTerdaftar</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='549' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web User</div>
+
+
+		</li>
+		<li test-id='550' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterEmail(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "lazuardi@gmail.com" pada Web User</div>
+
+
+		</li>
+		<li test-id='551' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "12345" pada Web User</div>
+
+
+		</li>
+		<li test-id='552' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web User</div>
+
+
+		</li>
+		<li test-id='553' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.verifyLoginMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil dashboard LOGIN dengan teks "Akun tidak ditemukan" pada Web User</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='554' status='pass'>
+
+	<span class='duration right label'>00 00 10.791</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.).</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_User_Login_Gagal_KombinasiSalah</span>
+				<span class='category label'>@Negative</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='569' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web User</div>
+
+
+		</li>
+		<li test-id='570' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterEmail(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "hadirsqa1@gmail.com" pada Web User</div>
+
+
+		</li>
+		<li test-id='571' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "12345" pada Web User</div>
+
+
+		</li>
+		<li test-id='572' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web User</div>
+
+
+		</li>
+		<li test-id='573' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.verifyLoginMessage(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then tampil dashboard LOGIN dengan teks "Email atau password salah" pada Web User</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='574' status='pass'>
+
+	<span class='duration right label'>00 00 10.770</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Login dengan Kredensial valid.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_User_Login_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='589' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.openLoginPage())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given saya membuka halaman login pada Web User</div>
+
+
+		</li>
+		<li test-id='590' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterEmail(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan email "hadirsqa1@gmail.com" pada Web User</div>
+
+
+		</li>
+		<li test-id='591' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.enterPassword(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya memasukkan password "SQA@Hadir12345" pada Web User</div>
+
+
+		</li>
+		<li test-id='592' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.clickLoginButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol login pada Web User</div>
+
+
+		</li>
+		<li test-id='593' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LoginDefinitions.verifyLoginMessage2(java.lang.String))"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then terlihat dashboard HADIR dengan teks "Kehadiranmu" pada Web User</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='594'>
+					<div class='test-heading'>
+						<span class='test-name'>User Authentication (Logout)</span>
+						<span class='test-time'>Apr 6, 2025 07:27:48 PM</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='595' status='pass'>
+
+	<span class='duration right label'>00 00 06.319</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Pengujian Berhasil LogOut.</div>
+	</div>
+	
+	
+		<div class='category-list'>
+				<span class='category label'>@TC_User_Logout_Sukses</span>
+				<span class='category label'>@Positive</span>
+		</div>
+	
+	<ul class='steps'>
+		<li test-id='610' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LogOutDefinitions.clickMenuButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And saya menekan tombol menu</div>
+
+
+		</li>
+		<li test-id='611' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LogOutDefinitions.clickLogOutButton())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When saya menekan tombol logout pada dashboard HADIR di Web User</div>
+
+
+		</li>
+		<li test-id='612' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(com.juaracoding.WebUser.steps.LogOutDefinitions.backToLogin())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Tampil kembali dashboard LOGIN dengan kolom input email yang masih kosong</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='category-collection' class='category-collection'>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Positive</span>
+						<span class='category-status right'>
+						<span class='label pass'>14</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 14</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:19:51 PM</td>
+										<td class='linked' test-id='42'>Pengujian Login dengan Kredensial valid</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:20:20 PM</td>
+										<td class='linked' test-id='82'>Sistem menampilkan hasil pencarian jika data shifting tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:20:28 PM</td>
+										<td class='linked' test-id='101'>Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:20:53 PM</td>
+										<td class='linked' test-id='138'>Berhasil Mengubah Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:21:30 PM</td>
+										<td class='linked' test-id='179'>Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:22:33 PM</td>
+										<td class='linked' test-id='258'>Berhasil Menambahkan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:23:44 PM</td>
+										<td class='linked' test-id='304'>Sistem menampilkan hasil pencarian jika data jadwal tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:23:52 PM</td>
+										<td class='linked' test-id='323'>Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:24:30 PM</td>
+										<td class='linked' test-id='378'>Pengguna Berhasil Mengubah Data Jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:25:36 PM</td>
+										<td class='linked' test-id='427'>Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:26:12 PM</td>
+										<td class='linked' test-id='484'>Pengguna berhasil menambahkan data jadwal dengan input valid.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:27:04 PM</td>
+										<td class='linked' test-id='515'>Pengujian Berhasil LogOut</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:27:37 PM</td>
+										<td class='linked' test-id='574'>Pengujian Login dengan Kredensial valid.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:27:48 PM</td>
+										<td class='linked' test-id='595'>Pengujian Berhasil LogOut.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Tambah_Gagal_KolomKosong</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:21:57 PM</td>
+										<td class='linked' test-id='218'>pengguna mencoba menambahkan shifting tanpa mengisi satu pun kolom input.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Delete_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:21:30 PM</td>
+										<td class='linked' test-id='179'>Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Tambah_Gagal_KodeTerpakai</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:22:08 PM</td>
+										<td class='linked' test-id='236'>Pengguna mencoba menambahkan shifting dengan kode yang sudah digunakan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Tambahkan_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:21:43 PM</td>
+										<td class='linked' test-id='199'>Pengguna Membatalkan Penambahan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Reset_Pencarian_Data_Berhasil</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:20:28 PM</td>
+										<td class='linked' test-id='101'>Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Negative</span>
+						<span class='category-status right'>
+						<span class='label pass'>16</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 16</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:19:27 PM</td>
+										<td class='linked' test-id='2'>Pengujian Login dengan Akun yang Tidak Terdaftar</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:19:42 PM</td>
+										<td class='linked' test-id='22'>Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.)</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:20:00 PM</td>
+										<td class='linked' test-id='63'>Sistem menampilkan tabel kosong jika pencarian shifting tidak ditemukan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:20:34 PM</td>
+										<td class='linked' test-id='119'>Pengguna Membatalkan pengubahan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:21:14 PM</td>
+										<td class='linked' test-id='160'>Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:21:43 PM</td>
+										<td class='linked' test-id='199'>Pengguna Membatalkan Penambahan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:21:57 PM</td>
+										<td class='linked' test-id='218'>pengguna mencoba menambahkan shifting tanpa mengisi satu pun kolom input.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:22:08 PM</td>
+										<td class='linked' test-id='236'>Pengguna mencoba menambahkan shifting dengan kode yang sudah digunakan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:23:25 PM</td>
+										<td class='linked' test-id='285'>Sistem menampilkan tabel kosong jika pencarian jadwal tidak ditemukan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:23:59 PM</td>
+										<td class='linked' test-id='341'>Pengguna Membatalkan pengubahan Data Jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:24:19 PM</td>
+										<td class='linked' test-id='360'>Gagal mengedit data jadwal tanpa perubahan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:25:18 PM</td>
+										<td class='linked' test-id='408'>Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:25:49 PM</td>
+										<td class='linked' test-id='447'>Tidak ada perubahan saat pengguna membatalkan penambahan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:26:03 PM</td>
+										<td class='linked' test-id='466'>Gagal Tambah Jadwal - Semua kolom kosong</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:27:15 PM</td>
+										<td class='linked' test-id='534'>Pengujian Login dengan Akun yang Tidak Terdaftar.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2025 07:27:26 PM</td>
+										<td class='linked' test-id='554'>Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.).</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Search_Data_Ditemukan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:23:44 PM</td>
+										<td class='linked' test-id='304'>Sistem menampilkan hasil pencarian jika data jadwal tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Tambahkan_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:26:12 PM</td>
+										<td class='linked' test-id='484'>Pengguna berhasil menambahkan data jadwal dengan input valid.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Edit_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:20:53 PM</td>
+										<td class='linked' test-id='138'>Berhasil Mengubah Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_User_Login_Gagal_AkunTidakTerdaftar</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:27:15 PM</td>
+										<td class='linked' test-id='534'>Pengujian Login dengan Akun yang Tidak Terdaftar.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Delete_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:21:14 PM</td>
+										<td class='linked' test-id='160'>Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Admin_Login_Gagal_KombinasiSalah</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:19:42 PM</td>
+										<td class='linked' test-id='22'>Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.)</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Admin_Logout_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:27:04 PM</td>
+										<td class='linked' test-id='515'>Pengujian Berhasil LogOut</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Admin_Login_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:19:51 PM</td>
+										<td class='linked' test-id='42'>Pengujian Login dengan Kredensial valid</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Search_Data_Ditemukan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:20:20 PM</td>
+										<td class='linked' test-id='82'>Sistem menampilkan hasil pencarian jika data shifting tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_User_Login_Gagal_KombinasiSalah</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:27:26 PM</td>
+										<td class='linked' test-id='554'>Pengujian Login dengan Kredensial yang Salah (Password Salah, Username Salah, dll.).</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Tambahkan_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:22:33 PM</td>
+										<td class='linked' test-id='258'>Berhasil Menambahkan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Reset_Pencarian_Data_Berhasil</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:23:52 PM</td>
+										<td class='linked' test-id='323'>Pengguna berhasil melakukan penghapusan data pada kolom inputan pencarian.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Edit_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:23:59 PM</td>
+										<td class='linked' test-id='341'>Pengguna Membatalkan pengubahan Data Jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_User_Logout_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:27:48 PM</td>
+										<td class='linked' test-id='595'>Pengujian Berhasil LogOut.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Edit_Gagal_Tanpa_Perubahan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:24:19 PM</td>
+										<td class='linked' test-id='360'>Gagal mengedit data jadwal tanpa perubahan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Tambah_Gagal_KolomKosong</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:26:03 PM</td>
+										<td class='linked' test-id='466'>Gagal Tambah Jadwal - Semua kolom kosong</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Edit_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:24:30 PM</td>
+										<td class='linked' test-id='378'>Pengguna Berhasil Mengubah Data Jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Tambahkan_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:25:49 PM</td>
+										<td class='linked' test-id='447'>Tidak ada perubahan saat pengguna membatalkan penambahan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Search_Data_Tidak_Ditemukan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:23:25 PM</td>
+										<td class='linked' test-id='285'>Sistem menampilkan tabel kosong jika pencarian jadwal tidak ditemukan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Edit_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:20:34 PM</td>
+										<td class='linked' test-id='119'>Pengguna Membatalkan pengubahan Data Shifting.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Admin_Login_Gagal_AkunTidakTerdaftar</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:19:27 PM</td>
+										<td class='linked' test-id='2'>Pengujian Login dengan Akun yang Tidak Terdaftar</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Delete_Dibatalkan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:25:18 PM</td>
+										<td class='linked' test-id='408'>Tidak ada perubahan saat pengguna membatalkan penghapusan jadwal.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Jadwal_Delete_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:25:36 PM</td>
+										<td class='linked' test-id='427'>Pengguna berhasil menghapus data jadwal dan data tidak lagi tersedia.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_Shifting_Search_Data_Tidak_Ditemukan</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:20:00 PM</td>
+										<td class='linked' test-id='63'>Sistem menampilkan tabel kosong jika pencarian shifting tidak ditemukan.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@TC_User_Login_Sukses</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2025 07:27:37 PM</td>
+										<td class='linked' test-id='574'>Pengujian Login dengan Kredensial valid.</td>
+										<td><span class='test-status Pass'>Pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>14</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>30</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>148</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 6, 2025 07:19:25 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 6, 2025 07:27:54 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 08 28.997</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Skipped</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@Positive</td>
+							<td>14</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Tambah_Gagal_KolomKosong</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Delete_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Tambah_Gagal_KodeTerpakai</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Tambahkan_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Reset_Pencarian_Data_Berhasil</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Negative</td>
+							<td>16</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Search_Data_Ditemukan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Tambahkan_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Edit_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_User_Login_Gagal_AkunTidakTerdaftar</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Delete_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Admin_Login_Gagal_KombinasiSalah</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Admin_Logout_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Admin_Login_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Search_Data_Ditemukan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_User_Login_Gagal_KombinasiSalah</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Tambahkan_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Reset_Pencarian_Data_Berhasil</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Edit_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_User_Logout_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Edit_Gagal_Tanpa_Perubahan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Tambah_Gagal_KolomKosong</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Edit_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Tambahkan_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Search_Data_Tidak_Ditemukan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Edit_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Admin_Login_Gagal_AkunTidakTerdaftar</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Delete_Dibatalkan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Jadwal_Delete_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_Shifting_Search_Data_Tidak_Ditemukan</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@TC_User_Login_Sukses</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 14,
+				passParent: 14,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 30,
+				passChild: 30,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 148,
+				passGrandChild: 148,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Admin Authentication (Login)":33.298,"Search Shifting":27.726,"Reset Shifting":6.223,"Edit Shifting":39.554,"Delete Shifting":28.966,"Tambahkan Shifting":101.828,"Search Jadwal":27.558,"Reset Jadwal":6.197,"Edit Jadwal Featured":79.178,"Delete Jadwal":31.194,"Tambahkan Jadwal":74.945,"Admin Authentication (Logout)":11.187,"User Authentication (Login)":32.378,"User Authentication (Logout)":6.319
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>
