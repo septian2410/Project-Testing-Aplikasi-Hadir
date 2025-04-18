@@ -34,6 +34,11 @@ https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view?usp=shari
 ![TEST RESULT KATALON STUDIO](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49)
 
 
+## TEST API WITH J-Meter
+------------------------
+![API Testing (JMeter)](https://github.com/user-attachments/assets/fbd59812-36b3-4d1a-a8f4-ed1ea070548c)
+
+
 ## Dokumentasi Lainnya
 ------------------------
 ![Foto Introduction Presentasi](https://github.com/user-attachments/assets/68369e2d-bac9-4c48-9a5d-e79df00314d7)
