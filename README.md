@@ -34,6 +34,13 @@ https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view?usp=shari
 ![TEST RESULT KATALON STUDIO](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49)
 
 
+## alat manajemen proyek dan pelacakan issue (JIRA)
+------------------------
+![Jira 1](https://github.com/user-attachments/assets/2475e5bb-5c34-43f2-9759-18e05cbfce97)
+![Jira 2](https://github.com/user-attachments/assets/5548def5-e69a-4c85-a15c-9f418aa02b0a)
+
+
+
 ## TEST API WITH J-Meter
 ------------------------
 ![API Testing (JMeter)](https://github.com/user-attachments/assets/fbd59812-36b3-4d1a-a8f4-ed1ea070548c)
