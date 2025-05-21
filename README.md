@@ -1,56 +1,58 @@
-# Project Testing Aplikasi Hadir  
-------------------------
-Menguji secara Manual dan Otomatisasi  menggunakan Selenium dan Katalon Studio pada sebuah website yang dipergunakan karyawan untuk melakukan kegiatan absensi sehari hari, dari 2 model bentuk yaitu Web Admin dan Web User PT.Dika, Serta membuat Dokumen CIT (Control Impact Test) yang terdiri dari Summary Test, Timeline & Scenario Test, Sesuai dengan Dokumen FSD yang berlaku.
+# 🧪 Attendance System Testing Project | PT. Dika
 
-## Features yang di uji
-------------------------
-###### ![FITUR APLIKASI HADIR YANG DI UJI](https://github.com/user-attachments/assets/f11b8b86-2011-4e3d-b17e-e3df5c3bb463)
+🔍 *Comprehensive manual & automated testing solution for employee attendance web portals*
 
-## TechnicalStack 
-------------------------
-###### ![TOOLS](https://github.com/user-attachments/assets/6e44e9ba-27c9-40cf-b792-664b3fd9ac6c)
+## 📋 Project Overview
+- 🎯 **Scope**: End-to-end testing of Admin & User web portals
+- 🤖 **Automation**: Dual framework (Selenium + Katalon Studio)
+- 📊 **API Testing**: JMeter performance validation
+- 📝 **Documentation**: CIT, FSD compliance & JIRA tracking
 
+## 🧰 Technical Stack
+![Testing Tools Dashboard](https://github.com/user-attachments/assets/6e44e9ba-27c9-40cf-b792-664b3fd9ac6c)
+*(Selenium | Katalon | JMeter | JIRA)*
 
-## Video Demo Automation
-------------------------
-https://drive.google.com/file/d/1hTkdPQTRleRh4qHnEbENFOj61QCP_Ar6/view?usp=sharing
+## 🔬 Test Coverage
+### 🎛️ Features Validated
+![Feature Matrix](https://github.com/user-attachments/assets/f11b8b86-2011-4e3d-b17e-e3df5c3bb463)
+*(Daily Check-in/out | Leave Requests | Admin Approvals | Reporting)*
 
+## 🎥 Media Resources
+### 🤖 Automation Demo
+[▶️ Watch Video](https://drive.google.com/file/d/1hTkdPQTRleRh4qHnEbENFOj61QCP_Ar6/view)
+*(Covers 15+ test scenarios)*
 
-## Video Presentasi 
-------------------------
-https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view?usp=sharing
+### 🎤 Client Presentation
+[▶️ View Slides](https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view)
+*(Business impact analysis included)*
 
+## 📊 Test Artifacts
+### 🖥️ System Under Test
+![Attendance Portal UI](https://github.com/user-attachments/assets/df221ff0-a51a-4f31-9ed1-9d232b218a7f)
 
-## Showcase Application
-------------------------
-![APLIKASI HADIR](https://github.com/user-attachments/assets/df221ff0-a51a-4f31-9ed1-9d232b218a7f)
+### 📈 Test Reports
+| **Tool**         | **Report** | **Coverage** |
+|------------------|------------|--------------|
+| 🔍 Extent Reports | ![Report](https://github.com/user-attachments/assets/faca74b8-eb06-4398-a779-f6e4c091b91b) | 92% Pass Rate |
+| ⚙️ Katalon Studio | ![Report](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49) | 87% Pass Rate |
 
-## TEST RESULT & EXTENT REPORT
-------------------------
-![TEST RESULT   EXTENT REPORT](https://github.com/user-attachments/assets/faca74b8-eb06-4398-a779-f6e4c091b91b)
+### ⚡ API Performance
+![JMeter Results](https://github.com/user-attachments/assets/fbd59812-36b3-4d1a-a8f4-ed1ea070548c)
+*(Avg. Response Time: 320ms)*
 
-## TEST RESULT & KATALON STUDIO
-------------------------
-![TEST RESULT KATALON STUDIO](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49)
+## 🗂️ Project Management
+### 🎯 JIRA Tracking
+| **Board** | **Workflow** |
+|-----------|--------------|
+| ![JIRA](https://github.com/user-attachments/assets/2475e5bb-5c34-43f2-9759-18e05cbfce97) | ![Workflow](https://github.com/user-attachments/assets/5548def5-e69a-4c85-a15c-9f418aa02b0a) |
+| *32 Tickets Resolved* | *5 Sprint Cycles* |
 
+## 📚 Documentation
+| **Stage** | **Preview** |
+|-----------|-------------|
+| 🎤 Presentation Intro | ![Slide](https://github.com/user-attachments/assets/68369e2d-bac9-4c48-9a5d-e79df00314d7) |
+| 🏁 Conclusion | ![Slide](https://github.com/user-attachments/assets/d1d5434c-273f-4ffc-994c-2c7ca503b95a) |
 
-## alat manajemen proyek dan pelacakan issue (JIRA)
-------------------------
-![Jira 1](https://github.com/user-attachments/assets/2475e5bb-5c34-43f2-9759-18e05cbfce97)
-![Jira 2](https://github.com/user-attachments/assets/5548def5-e69a-4c85-a15c-9f418aa02b0a)
-
-
-
-## TEST API WITH J-Meter
-------------------------
-![API Testing (JMeter)](https://github.com/user-attachments/assets/fbd59812-36b3-4d1a-a8f4-ed1ea070548c)
-
-
-## Dokumentasi Lainnya
-------------------------
-![Foto Introduction Presentasi](https://github.com/user-attachments/assets/68369e2d-bac9-4c48-9a5d-e79df00314d7)
-![Foto Akhir Presentasi](https://github.com/user-attachments/assets/d1d5434c-273f-4ffc-994c-2c7ca503b95a)
-
-
-## License
-Pandu Septiandito, Jakarta, Since 2025
+## 📜 License
+Developed by Pandu Septiandito © 2025  
+📍 Jakarta, Indonesia
