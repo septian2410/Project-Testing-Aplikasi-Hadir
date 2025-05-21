@@ -35,6 +35,8 @@
 |------------------|------------|
 | 🔍 Extent Reports | ![Report](https://github.com/user-attachments/assets/faca74b8-eb06-4398-a779-f6e4c091b91b) |
 | ⚙️ Katalon Studio | ![Report](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49) | 
+| 🔍 System Integration Testing (SIT) | ![SIT](https://github.com/user-attachments/assets/94e2e3c2-d627-42b1-9208-b3a2cfdffaaf) |
+
 
 ### ⚡ API Performance
 ![JMeter Results](https://github.com/user-attachments/assets/fbd59812-36b3-4d1a-a8f4-ed1ea070548c)
