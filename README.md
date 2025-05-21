@@ -22,7 +22,7 @@
 [▶️ Watch Video](https://drive.google.com/file/d/1hTkdPQTRleRh4qHnEbENFOj61QCP_Ar6/view)
 
 
-### 🎤 Client Presentation
+### 🎤 Presentation
 [▶️ View Slides](https://drive.google.com/file/d/1keci3JNIOrUVeunST0SdKbRavV42Bm9e/view)
 
 
@@ -31,8 +31,8 @@
 ![Attendance Portal UI](https://github.com/user-attachments/assets/df221ff0-a51a-4f31-9ed1-9d232b218a7f)
 
 ### 📈 Test Reports
-| **Tool**         | **Report** | **Coverage** |
-|------------------|------------|--------------|
+| **Tool**         | **Report** | 
+|------------------|------------|
 | 🔍 Extent Reports | ![Report](https://github.com/user-attachments/assets/faca74b8-eb06-4398-a779-f6e4c091b91b) |
 | ⚙️ Katalon Studio | ![Report](https://github.com/user-attachments/assets/56539acf-ecaa-4f08-b6d1-979f3a135d49) | 
 
